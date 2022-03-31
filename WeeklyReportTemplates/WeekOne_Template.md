@@ -3,8 +3,6 @@ Weekly Report: Week 1
 
 **Submitted by** Name
 
-**Period** mm/dd/aaaa → mm/dd/aaaa
-
 
 Daily work
 ----------
