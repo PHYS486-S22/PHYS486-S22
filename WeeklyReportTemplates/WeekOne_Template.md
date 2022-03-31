@@ -52,3 +52,5 @@ Things that were particularly hard
 That's all for this week!
 -----
 > We'll add a section in Week Two where you can describe your preferences for project one topics, and indicate if you will be working with a partner.  I'll distribute more info about the topics soon, but do use this week to talk to anyone you are thinking about working with on Project One!
+> 
+> PS. This report template was modified from a generic weekly report template at [https://github.com/LucasVandroux/template-weekly-report/blob/master/template-weekly-report-EN.md](https://github.com/LucasVandroux/template-weekly-report/blob/master/template-weekly-report-EN.md).  Remember, it is ok to lean on other resources, we just need to cite them!
