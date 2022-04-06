@@ -26,7 +26,7 @@ Reduce the dimensionality of the problem if possible (ie, combine parameters tha
 * Write-up: Your write-up for this problem should be a <6 page PDF file with no more than 6 figures.  Your write-up should discuss:
     * the physical model (ie, how drag + projectile motion work), 
     * how you have implemented this model computationally, 
-    * how you have established the physical accuracy of your model (ie, tests with known solutions you have performed to demonstrate its accuarcy),  
+    * how you have established the physical accuracy of your model (ie, tests with known solutions you have performed to demonstrate its accuracy),  
     * how you have validated the numerical precision of your calculations, and
     * your results, with qualitative and quantitative conclusions regarding the dependence of the time difference on the parameters of the projectile and the conditions that describe the launched state. \\ 
 
