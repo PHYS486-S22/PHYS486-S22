@@ -23,7 +23,7 @@ Reduce the dimensionality of the problem if possible (ie, combine parameters tha
 
 **Deliverables:**
 
-* Write-up: Your write-up for this problem should be a <6 page PDF file with no more than 6 figures.  Your write-up should discuss:
+* Write-up: Your write-up for this problem should be a <6 page PDF file (or a markdown file of comparable length when rendered) with no more than 6 figures.  Your write-up should discuss:
     * the physical model (ie, how drag + projectile motion work), 
     * how you have implemented this model computationally, 
     * how you have established the physical accuracy of your model (ie, tests with known solutions you have performed to demonstrate its accuracy - replicating figures 2.4 or 2.5 in Giordano & Nakanishi can be a good confidence builder, for instance),  
