@@ -32,7 +32,7 @@ Reduce the dimensionality of the problem if possible (ie, combine parameters tha
 
 * Along with your write-up, submit a digital copy of your code and a tab delimited ascii table providing the x and y positions as a function of time for a 100 kg sphere with a cross-sectional area of A=0.1 m<sup>2</sup> launched from a height of y=10<sup>3.5</sup> m with v<sub>x</sub>=10 m/s.  For this calculation, assume a drag coefficient of C=0.5 and a density of air of <img src="https://render.githubusercontent.com/render/math?math=\rho">=1.225 kg \ m<sup>3</sup>. For this table, follow the format given below, where time and distance expressed in units of seconds and meters, respectively. 
 
-| time (sec) | x (m) | $y$ (m) | 
+| time (sec) | x (m) |   y (m) | 
 | ---------- | ----- | ------- |
 |    0.0     |  0.0  | 3162.28 |
 |    ...     |  ...  |   ...   |
@@ -40,6 +40,7 @@ Reduce the dimensionality of the problem if possible (ie, combine parameters tha
 
 All of the elements described above (the PDF of your write-up, your code, and your numerical table) should be committed to your Project One folder in your Public GitHub repository.  
 
+Note: you will also deliver a few interim products between now and your final project submission (your project plan + psuedocode by April 17th, and working code for a key component of your project by April 24th), but those will be described in separate handouts that apply to all projects.
 
 
 **Additional Resources:** 
