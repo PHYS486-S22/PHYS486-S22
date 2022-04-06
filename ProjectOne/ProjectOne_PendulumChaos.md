@@ -7,18 +7,18 @@ If we define the following variables:
 
 * Pendulum's mass: m
 * Pendulum's length: l
-* acceleration due to gravity: g
-* Pendulum's drive force: <img src="https://render.githubusercontent.com/render/math?math=F(t) = F_0 \rm{sin}(\omega t)">
-* damping force: <img src="https://render.githubusercontent.com/render/math?math=-b l^2 \omega">
-* restoring force due to gravity:<img src="https://render.githubusercontent.com/render/math?math=-m g l \rm{sin} \theta">
-* pendulum's fundamental frequency: <img src="https://render.githubusercontent.com/render/math?math=\omega_0 = g / l">
+* acceleration due to gravity: g (=-9.8 m.s -- signs below change if g is assumed to be positive!)
+* Pendulum's drive force: <img src="https://render.githubusercontent.com/render/math?math=F(t) = F_0 \rm{sin}(\omega_D t)">
+* damping force: <img src="https://render.githubusercontent.com/render/math?math=-q \omega"> 
+* restoring force due to gravity:<img src="https://render.githubusercontent.com/render/math?math=-m g l \rm{sin} \theta"> (or, in the small angle approximation, <img src="https://render.githubusercontent.com/render/math?math=-m g l \theta">) 
+* pendulum's fundamental frequency: <img src="https://render.githubusercontent.com/render/math?math=\omega_0 = \sqrt{\frac{g}{l}}">
 
 
 Then we can express the pendulum's equations of motion as:
 
 * <img src="https://render.githubusercontent.com/render/math?math=\delta \theta = \omega">
 
-* <img src="https://render.githubusercontent.com/render/math?math=\delta \omega = \omega_0^2 \rm{sin} \theta - \frac{b}{m} \omega">+<img src="https://render.githubusercontent.com/render/math?math=F_0 \rm{sin} (\omega t)">
+* <img src="https://render.githubusercontent.com/render/math?math=\delta \omega = - \omega_0^2 \rm{sin} \theta - q \omega">+<img src="https://render.githubusercontent.com/render/math?math=F_0 \rm{sin} (\omega_D t)">
 
 These equations of motion are well suited to a computational approach, but particularly because the system can exhibit chaotic behavior, an integration method with a high level of numerical precision is desirable.  A second order Runga-Kutta (RK-2) integration method usually suffices to capture the system's sensitivity well. 
 
@@ -35,22 +35,27 @@ This homework is more computationally intensive than the other two options for P
 * Write-up: Your write-up for this problem should be a PDF or markdown file with a number of specific figures to illustrate the correctness of your calculations.  These figures include reproductions of:
     * the plots of <img src="https://render.githubusercontent.com/render/math?math=\theta"> and <img src="https://render.githubusercontent.com/render/math?math=\omega"> vs. time in Figure 3.6 of Giordano & Nakanishi's Computational Physics text.  Try to mimic the formatting (including all three traces in a single panel) if possible.
         * My versions are here:
-            * Figure 3.6, left panel 
+            * <a href="https://github.com/PHYS486-S22/PHYS486-S22/blob/main/ProjectOne/Figures/ReplicateFigure3.6.left.png">Figure 3.6, left panel</a>
+            * <a href="https://github.com/PHYS486-S22/PHYS486-S22/blob/main/ProjectOne/Figures/ReplicateFigure3.6.middle.png">Figure 3.6, middle panel</a>
+            * <a href="https://github.com/PHYS486-S22/PHYS486-S22/blob/main/ProjectOne/Figures/ReplicateFigure3.6.right.png">Figure 3.6, right panel</a> 
     * Figure 3.8 of Giordano & Nakanishi's Computational Physics text, demonstrating the sensitivity of the system to its initial conditions;
-    * the Poincare section (a plot of <img src="https://render.githubusercontent.com/render/math?math=\theta"> vs. <img src="https://render.githubusercontent.com/render/math?math=\omega">) in Figure 3.9 (for F<sub>D</sub> = 1.2);
+        * My versions are here:
+            * <a href="https://github.com/PHYS486-S22/PHYS486-S22/blob/main/ProjectOne/Figures/ReplicateFigure3.8.left.png">Figure 3.8, left panel</a>
+            * <a href="https://github.com/PHYS486-S22/PHYS486-S22/blob/main/ProjectOne/Figures/ReplicateFigure3.8.right.png">Figure 3.8, right panel</a>
+    * the Poincare section (a plot of <img src="https://render.githubusercontent.com/render/math?math=\theta"> vs. <img src="https://render.githubusercontent.com/render/math?math=\omega">) in Figure 3.9 (for F<sub>D</sub> = 1.2 - <a href="https://github.com/PHYS486-S22/PHYS486-S22/blob/main/ProjectOne/Figures/ReplicateFigure3.9.png">my version is here</a>);
     * Additional Poincare sections for F<sub>D</sub>=1.4, 1.44 \& 1.465.  Make sure to remove transient behavior to achieve a clean Poincare section.
-    * a full bifurcation diagram for a damped driven pendulum with a driving force coefficient in the range of 1.35 < F<sub>D</sub> < 1.5 (and non-F<sub>D</sub> parameters as given at the end of the caption for Figure 3.6 of Giordano & Nakanishi's Computational Physics text).
+    * a full bifurcation diagram for a damped driven pendulum with a driving force coefficient in the range of 1.35 < F<sub>D</sub> < 1.5 (and non-F<sub>D</sub> parameters as given at the end of the caption for Figure 3.6 of Giordano & Nakanishi's Computational Physics text).  <a href="https://github.com/PHYS486-S22/PHYS486-S22/blob/main/ProjectOne/Figures/ReplicateFigure3.11.png">My version is here.</a>
 
 	Your write-up should also include a basic discussion of the system and your implementation of it, including:
     
     * the physical model (ie, the forces that affect the pendulum, and how they result in the equations of motion given above), 
     * how you have implemented this model computationally (i.e., an explanation of your RK-2 implementation),
     * how you have established the physical accuracy of your model (ie, tests with known solutions you have performed to demonstrate its accuracy),  
-    * explanations of the Poincare sections + bifurcation diagrams you have produced, and what they demonstrate about the system's motion. \\ 
+    * explanations of the Poincare sections + bifurcation diagrams you have produced, and what they demonstrate about the system's motion. 
 
 * Along with your write-up, submit a digital copy of your code and high quality copies of your figures (ie, as separate files rather than just embedded in your PDF write-up). 
 
-All of the elements described above (the PDF of your write-up, your code, and your figures) should be committed to your Project One folder in your Public GitHub repository.  
+All of the elements described above (your write-up, your code, and your figures) should be committed to your Project One folder in your Public GitHub repository.  
 
 Note: you will also deliver a few interim products between now and your final project submission (your project plan + psuedocode by April 17th, and working code for a key component of your project by April 24th), but those will be described in separate handouts that apply to all projects.
 
