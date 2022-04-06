@@ -5,7 +5,7 @@ Project One: Realistic Projectile Motion
 
 With a computer, however, that coupling can be accounted for in a  straightforward manner. The acceleration due to drag can be calculated as:
 
-$$\vec{a_{drag}} = - \frac{C A \rho v^2}{2 m} \hat{v}$$ 
+<img src="https://render.githubusercontent.com/render/math?math=\vec{a_{drag}} = - \frac{C A \rho v^2}{2 m} \hat{v}">
 
 where C is the drag co-efficient of the object in question, A is the object's cross sectional area, $\rho$ is the density of the medium the object is moving through, v is its total 2-D velocity, and the $\hat{v}$ term demonstrates that the acceleration will operate to oppose the direction of motion. 
 
