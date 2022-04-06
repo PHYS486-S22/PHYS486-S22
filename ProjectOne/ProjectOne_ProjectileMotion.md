@@ -26,9 +26,10 @@ Reduce the dimensionality of the problem if possible (ie, combine parameters tha
 * Write-up: Your write-up for this problem should be a <6 page PDF file (or a markdown file of comparable length when rendered) with no more than 6 figures.  Your write-up should discuss:
     * the physical model (ie, how drag + projectile motion work), 
     * how you have implemented this model computationally, 
-    * how you have established the physical accuracy of your model (ie, tests with known solutions you have performed to demonstrate its accuracy - replicating figures 2.4 or 2.5 in Giordano & Nakanishi can be a good confidence builder, for instance),  
+    * how you have established the physical accuracy of your model (ie, tests with known solutions you have performed to demonstrate its accuracy - replicating figures 2.4 or 2.5 in Giordano & Nakanishi can be a good confidence builder, for instance. My version of Figure 2.5 checks that the profile changes when the drag coefficient is set to zero, and also checks that my trajectory -- which does not include the correction for the change in atmospheric density as a function of height -- 'lands' at the same x position as the lower dotted line in the published figure...)
+      <img src="https://github.com/PHYS486-S22/PHYS486-S22/blob/main/ProjectOne/ReplicateFigure2.5.png" width="400"> 
     * how you have validated the numerical precision of your calculations (i.e., convergence tests performed), and
-    * your results, with qualitative and quantitative conclusions regarding the dependence of the time difference on the parameters of the projectile and the conditions that describe the launched state. \\ 
+    * your results, with qualitative and quantitative conclusions regarding the dependence of the time difference on the parameters of the projectile and the conditions that describe the launched state. 
 
 * Along with your write-up, submit a digital copy of your code and a tab delimited ascii table providing the x and y positions as a function of time for a 100 kg sphere with a cross-sectional area of A=0.1 m<sup>2</sup> launched from a height of y=10<sup>3.5</sup> m with v<sub>x</sub>=10 m/s.  For this calculation, assume a drag coefficient of C=0.5 and a density of air of <img src="https://render.githubusercontent.com/render/math?math=\rho">=1.225 kg \ m<sup>3</sup>. For this table, follow the format given below, where time and distance expressed in units of seconds and meters, respectively. 
 
