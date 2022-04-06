@@ -59,4 +59,8 @@ Note: you will also deliver a few interim products between now and your final pr
 
 * A detailed discussion of the dynamics of a damped driven pendulum and its transition to chaotic motion (though without any python code snippets) is given in this write-up by Michael Fowler of the University of Virginia: [Driven Damped Pendulum: Period Doubling, Chaos, Strange Attractors](https://galileoandeinstein.phys.virginia.edu/7010/CM_22a_Period_Doubling_Chaos.html)
 
+* A briefer discussion of a driven (but not damped!) pendulum with some relevant code examples is available in the online text [Learning Scientific Programming With Python](https://scipython.com/blog/the-harmonically-driven-pendulum/)
+
+* an even briefer discussion, but with more relevant python snippets for an actual driven, damped pendulum is also available in this notebook by [Prof. Ligare at Bucknell University](https://eg.bucknell.edu/~phys310/jupyter/chaotic_pendulum.html). 
+
 Remember, it is ok to use these resources, just make sure to cite them in your work!
