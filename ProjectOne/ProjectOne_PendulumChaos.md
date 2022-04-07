@@ -36,13 +36,13 @@ This homework is more computationally intensive than the other two options for P
     * the plots of <img src="https://render.githubusercontent.com/render/math?math=\theta"> and <img src="https://render.githubusercontent.com/render/math?math=\omega"> vs. time in Figure 3.6 of Giordano & Nakanishi's Computational Physics text.  Try to mimic the formatting (including all three traces in a single panel) if possible.
         * My versions are here:
             * <a href="https://github.com/PHYS486-S22/PHYS486-S22/blob/main/ProjectOne/Figures/ReplicateFigure3.6.left.png">Figure 3.6, left panel</a>
-            * <a href="https://github.com/PHYS486-S22/PHYS486-S22/blob/main/ProjectOne/Figures/ReplicateFigure3.6.middle.png">Figure 3.6, middle panel</a>
-            * <a href="https://github.com/PHYS486-S22/PHYS486-S22/blob/main/ProjectOne/Figures/ReplicateFigure3.6.right.png">Figure 3.6, right panel</a> 
+            * <a href="https://github.com/PHYS486-S22/PHYS486-S22/blob/main/ProjectOne/Figures/ReplicateFigure3.6.middle.jpg">Figure 3.6, middle panel</a>
+            * <a href="https://github.com/PHYS486-S22/PHYS486-S22/blob/main/ProjectOne/Figures/ReplicateFigure3.6.right.jpg">Figure 3.6, right panel</a> 
     * Figure 3.8 of Giordano & Nakanishi's Computational Physics text, demonstrating the sensitivity of the system to its initial conditions;
         * My versions are here:
-            * <a href="https://github.com/PHYS486-S22/PHYS486-S22/blob/main/ProjectOne/Figures/ReplicateFigure3.8.left.png">Figure 3.8, left panel</a>
-            * <a href="https://github.com/PHYS486-S22/PHYS486-S22/blob/main/ProjectOne/Figures/ReplicateFigure3.8.right.png">Figure 3.8, right panel</a>
-    * the Poincare section (a plot of <img src="https://render.githubusercontent.com/render/math?math=\theta"> vs. <img src="https://render.githubusercontent.com/render/math?math=\omega">) in Figure 3.9 (for F<sub>D</sub> = 1.2 - <a href="https://github.com/PHYS486-S22/PHYS486-S22/blob/main/ProjectOne/Figures/ReplicateFigure3.9.png">my version is here</a>);
+            * <a href="https://github.com/PHYS486-S22/PHYS486-S22/blob/main/ProjectOne/Figures/ReplicateFigure3.8.left.jpg">Figure 3.8, left panel</a>
+            * <a href="https://github.com/PHYS486-S22/PHYS486-S22/blob/main/ProjectOne/Figures/ReplicateFigure3.8.right.jpg">Figure 3.8, right panel</a>
+    * the Poincare section (a plot of <img src="https://render.githubusercontent.com/render/math?math=\theta"> vs. <img src="https://render.githubusercontent.com/render/math?math=\omega">) in Figure 3.9 (for F<sub>D</sub> = 1.2 - <a href="https://github.com/PHYS486-S22/PHYS486-S22/blob/main/ProjectOne/Figures/ReplicateFigure3.9.jpg">my version is here</a>);
     * Additional Poincare sections for F<sub>D</sub>=1.4, 1.44 \& 1.465.  Make sure to remove transient behavior to achieve a clean Poincare section.
     * a full bifurcation diagram for a damped driven pendulum with a driving force coefficient in the range of 1.35 < F<sub>D</sub> < 1.5 (and non-F<sub>D</sub> parameters as given at the end of the caption for Figure 3.6 of Giordano & Nakanishi's Computational Physics text).  <a href="https://github.com/PHYS486-S22/PHYS486-S22/blob/main/ProjectOne/Figures/ReplicateFigure3.11.png">My version is here.</a>
 
