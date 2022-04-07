@@ -5,15 +5,15 @@ Project One: Orbital Dynamics
 
 Despite this complexity of behavior, the formalism for calculating gravitational interactions in systems with more than two bodies may be reassuringly familiar. For simplicity, we can confine all objects in our system to a 2-dimensional plane, and place the origin of our coordinate system at the center of mass of the system. Neglecting the third dimension helps avoid lots of complexity, both in coding + in behavior, and placing the origin at the center of mass of the system then allows all bodies in the frame of reference to move freely in response to gravitational forces.  We can then calculate the separation between any two objects in the system as:
 
-<img src="https://github.com/PHYS486-S22/PHYS486-S22/blob/main/ProjectOne/Figures/separation.png" width="250">
+<img src="https://github.com/PHYS486-S22/PHYS486-S22/blob/main/ProjectOne/Figures/separation.png" width="350">
 
 We can then use a Euler Method-like formalism to step the position and velocities of each of the objects in our system forward in time. The 4th order Runga-Kutta method offers better precision, which is often required to model the system for many orbital timescales, but for simplicity we will introduce the formalism below with an Euler-like formalism; those completing this project can do a bit more background reading to understand the issues that may appear with a strict Euler implementation.
 
 In an Euler-like framework, the equations of motion for one object (we'll call it object A) interacting gravitationally with two other objects (we'll call them B and C), can then be projected forward in time as:
 
-<img src="https://github.com/PHYS486-S22/PHYS486-S22/blob/main/ProjectOne/Figures/vx_equation.png" width="250">
+<img src="https://github.com/PHYS486-S22/PHYS486-S22/blob/main/ProjectOne/Figures/vx_equation.png" width="500">
 
-<img src="https://github.com/PHYS486-S22/PHYS486-S22/blob/main/ProjectOne/Figures/vy_equation.png" width="250">
+<img src="https://github.com/PHYS486-S22/PHYS486-S22/blob/main/ProjectOne/Figures/vy_equation.png" width="500">
 
 <img src="https://github.com/PHYS486-S22/PHYS486-S22/blob/main/ProjectOne/Figures/x_equation.png" width="250">
 
