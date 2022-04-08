@@ -26,20 +26,22 @@ where the variables in these equations are:
 * object A's mass (and similarly for B+C): M<sub>A</sub> 
 * Gravitational constant: G
 
+Once these equations are coded up, the key to simulating a gravitational system is just defining your initial conditions (including the masses and making sure that the net momentum of the system is zero, lest the center of mass drift away from your origin) and letting things run. 
 
+**Project Scope:** The goal of this project is to simulate the Sun-Earth-Moon or Sun-Earth-Jupiter systems, using a framework where the Sun is not fixed at the system's center.  With your calculations, you should investigate a) how precisely energy is conserved in your simulation, over timescales as long as 10,000 years, and b) investigate how the stability of the system(s) are affected if we increase the mass of Jupiter and/or the Moon by factors of 10, 100, and 1000.  
 
-**Project Scope:** The goal of this project is to 
+- note: Scipy has a function, ODEint, that handles all the details of the orbit integration under the hood.  That is, I think, out of bounds for this assignment -- it is important to engage the details of how the stepping process occurs and how that affects the orbits that result.  
 
 **Deliverables:**
 
-* Write-up: Your write-up for this problem should be a PDF or markdown file with xx figures to illustrate the correctness of your calculations.  
+* Write-up: Your write-up for this problem should be a PDF or markdown file with <10 figures to illustrate the correctness of your calculations and your conclusions regarding the precision of your simulation's ability to conserve energy, and the stability of your solar systems as a function of time.  
 
 	Your write-up should also include a basic discussion of the dynamics and stability of the system, including:
     
-    * the physical model (ie, the forces that affect the pendulum, and how they result in the equations of motion given above), 
-    * how you have implemented this model computationally (i.e., an explanation of your RK-2 implementation),
+    * the physical model (ie, the forces that govern the gravitational interactions, and how they result in the equations of motion given above), 
+    * how you have implemented this model computationally (i.e., an explanation of your stepping implementation - 4th order Runga-Kutta or something similar),
     * how you have established the physical accuracy of your model (ie, tests with known solutions you have performed to demonstrate its accuracy),  
-    * explanations of the Poincare sections + bifurcation diagrams you have produced, and what they demonstrate about the system's motion. 
+    * explanations of the stability of the system(s) as a function of changes in the mass of the Moon / Jupiter. 
 
 * Along with your write-up, submit a digital copy of your code and high quality copies of your figures (ie, as separate files rather than just embedded in your PDF write-up). 
 
@@ -50,8 +52,10 @@ Note: you will also deliver a few interim products between now and your final pr
 
 **Additional Resources:** 
 
-* Chapter 4 of Giordano & Nakanishi's Computational Physics text provides a good treatment of the physics & implementation of ...
+* Chapter 4 of Giordano & Nakanishi's Computational Physics text provides a good introduction to computational implementations of gravitational interactions.  The text walks through how to calculate orbits around a central fixed mass, and provides a roadmap for routines where there are three or more objects, and/or the central object is not fixed. The implementations utilize a Euler-Cromer stepping method; reading Appendix A, which introduces other stepping methods and tests for checking for energy conservation etc, would be beneficial as well.  
 
+* Imad Pasha put together [a nice tutorial](https://prappleizer.github.io/Tutorials/RK4/RK4_Tutorial.html) for coding up orbits with a 4th order Runga Kutta implementation, and in full 3-D to boot!  This does include some reliance on astropy functions to track units, and linear algebra techniques to vectorize the operations, so it may be more than you need, but pedagogically it is a thorough write-up.
 
-
-Remember, it is ok to use these resources, just make sure to cite them in your work!
+* Philip Mocz similarly has a [tutorial](https://medium.com/swlh/create-your-own-n-body-simulation-with-python-f417234885e9) on how to build a compact, 3-D N-body code.  The [code](https://github.com/pmocz/nbody-python) is available on github as well.
+ 
+Remember, it is ok to use these resources, just make sure to cite them in your work! 
