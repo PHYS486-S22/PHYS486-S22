@@ -47,7 +47,8 @@ Topic Preferences for Project One
 -----
 > For project one, you will work on one of three project topics: projectile motion, the double pendulum (and the most explicit treatment of chaos theory), or orbital dynamics.  
 > Use the First Choice, Second Choice, and Third Choice fields below to indicate your preferences for which of these project topics you would most like to work on (or are least interested in working on).  
-> To provide maximum clarity, please list just the project names given above (projectile motion, double pendulum, and orbital dynamics).
+> To provide maximum clarity, please list just the project names given
+> above (projectile motion with drag, damped driven pendulum, and orbital dynamics).
 
 **First (Top) Choice:** 
 
