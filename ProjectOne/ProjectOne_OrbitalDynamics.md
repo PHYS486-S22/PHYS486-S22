@@ -57,5 +57,7 @@ Note: you will also deliver a few interim products between now and your final pr
 * Imad Pasha put together [a nice tutorial](https://prappleizer.github.io/Tutorials/RK4/RK4_Tutorial.html) for coding up orbits with a 4th order Runga Kutta implementation, and in full 3-D to boot!  This does include some reliance on astropy functions to track units, and linear algebra techniques to vectorize the operations, so it may be more than you need, but pedagogically it is a thorough write-up.
 
 * Philip Mocz similarly has a [tutorial](https://medium.com/swlh/create-your-own-n-body-simulation-with-python-f417234885e9) on how to build a compact, 3-D N-body code.  The [code](https://github.com/pmocz/nbody-python) is available on github as well.
- 
+
+* see also the references in the 'Solving ODEs: Methods & Considerations' module on Canvas.
+
 Remember, it is ok to use these resources, just make sure to cite them in your work! 
