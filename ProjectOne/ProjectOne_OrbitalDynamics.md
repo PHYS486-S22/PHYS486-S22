@@ -39,7 +39,7 @@ Once these equations are coded up, the key to simulating a gravitational system 
 	Your write-up should also include a basic discussion of the dynamics and stability of the system, including:
     
     * the physical model (ie, the forces that govern the gravitational interactions, and how they result in the equations of motion given above), 
-    * how you have implemented this model computationally (i.e., an explanation of your stepping implementation - 4th order Runga-Kutta or something similar),
+    * how you have implemented this model computationally (i.e., an explanation of your stepping implementation - to minimize energy issues, I strongly recommend using at least a 4th order Runga-Kutta method with a very small timestep, or a leapfrog/Verlet method to better minimize the energy leak.  Note that examples of both approaches are given below...),
     * how you have established the physical accuracy of your model (ie, tests with known solutions you have performed to demonstrate its accuracy),  
     * explanations of the stability of the system(s) as a function of changes in the mass of the Moon / Jupiter. 
 
