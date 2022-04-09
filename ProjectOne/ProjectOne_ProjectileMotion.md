@@ -28,7 +28,7 @@ Reduce the dimensionality of the problem if possible (ie, combine parameters tha
     * how you have implemented this model computationally, 
     * how you have established the physical accuracy of your model (ie, tests with known solutions you have performed to demonstrate its accuracy - replicating figures 2.4 or 2.5 in Giordano & Nakanishi can be a good confidence builder, for instance. My version of Figure 2.5 checks that the profile changes when the drag coefficient is set to zero, and also checks that my trajectory -- which does not include the correction for the change in atmospheric density as a function of height -- 'lands' at the same x position as the lower dotted line in the published figure...)
     
-      <img src="https://github.com/PHYS486-S22/PHYS486-S22/blob/main/ProjectOne/Figures/ReplicateFigure2.5.jpg" width="400"> 
+      <img src="https://github.com/PHYS486-S22/PHYS486-S22/blob/main/ProjectOne/Figures/ReplicateFigure2.5.png" width="400"> 
     * how you have validated the numerical precision of your calculations (i.e., convergence tests performed), and
     * your results, with qualitative and quantitative conclusions regarding the dependence of the time difference on the parameters of the projectile and the conditions that describe the launched state. 
 
