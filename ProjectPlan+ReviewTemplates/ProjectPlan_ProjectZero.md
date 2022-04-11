@@ -44,7 +44,7 @@ Routine Outline
 
 1. Initialize input variables (in retrospect, should/could have made a wrapper function that took in the variables + the filename for saving the resultant plot)
 
-2. Calculate all implicitly defined physical constants (i.e., tau*_*A, tau*_*B, N*_*A0, N*_*B0).
+2. Calculate all implicitly defined physical constants (i.e., tau_A, tau*_*B, N*_*A0, N*_*B0).
 
 3. call a function (project*_*populations) that runs the simulation.    
     This function will be called as:
