@@ -19,14 +19,14 @@ Variables
 
 **time_span** [float, single value, unitless (or, equivalently, a time expressed in units of tau<sub>A</sub>)]: the number of half-lives of species A that we want to run the calculation for.
 
-**n_steps** [integer, single value, unitless]: the number of timesteps we should split the simulation's time span into. This implicitly defines the length of each timestep as <img src="https://render.githubusercontent.com/render/math?math=\Delta t="> time*_*span/n*_*steps
+**n_steps** [integer, single value, unitless]: the number of timesteps we should split the simulation's time span into. This implicitly defines the length of each timestep as <img src="https://render.githubusercontent.com/render/math?math=\Delta t="> time_span/n_steps
 
 #### Physical constants
 **N<sub>A0</sub>** [float, single value, unitless (relative number)]: defines the size of the initial population of species A - in practice this is set to 1.0.
 
 **tau<sub>A</sub>** [float, single value, unitless (relative time)]: used in the calculation as the half-life/decay timescale of species A, but in practice set to one.  This has the practical implication of implicitly defining our time array to be in units of the actual half-life of species A (which was not set in code -- in retrospect this is probably not a wise choice, but since species A and B aren't defined as true physical species, any value we choose would have to be fictional anyway, so a value of 1.0 is as good as any other made-up value). 
 
-**N<sub>B0</sub>** [float, single value, unitless (relative number)]: defines the size of the initial population of species B, relative to the initial population of N<sub>A</sub>. This value is set by the user specified value of relative*_*N<sub>B</sub>, but in practice is defined as a new variable to allow the names for the properties of the two species to be perfectly symmetric.
+**N<sub>B0</sub>** [float, single value, unitless (relative number)]: defines the size of the initial population of species B, relative to the initial population of N<sub>A</sub>. This value is set by the user specified value of relative_N<sub>B</sub>, but in practice is defined as a new variable to allow the names for the properties of the two species to be perfectly symmetric.
 
 **tau<sub>B</sub>** [float, single value, unitless (relative time)]: the half-life of species B, expressed in units of the half life of species A (or, equivalently, the ratio of those two quantities).  Calculated as tau<sub>A</sub>/<img src="https://render.githubusercontent.com/render/math?math=\gamma"> 
 
@@ -44,14 +44,14 @@ Routine Outline
 
 1. Initialize input variables (in retrospect, should/could have made a wrapper function that took in the variables + the filename for saving the resultant plot)
 
-2. Calculate all implicitly defined physical constants (i.e., tau_A, tau*_*B, N*_*A0, N*_*B0).
+2. Calculate all implicitly defined physical constants (i.e., tau_A, tau_B, N_A0, N_B0).
 
-3. call a function (project*_*populations) that runs the simulation.    
+3. call a function (project_populations) that runs the simulation.    
     This function will be called as:
     
-        project_populations(N_A0, N_B0, tau_A, tau_B, time_span, n_steps)
+        time, N_A, N_B = project_populations(N_A0, N_B0, tau_A, tau_B, time_span, n_steps)
         
-    and will return arrays with the time, N*_*A and N*_*B of each timestep in the simulation.
+    and will return arrays with the time, N_A and N_B of each timestep in the simulation.
     
 
 --- functions ---    
@@ -59,23 +59,32 @@ Routine Outline
 **project*_*populations(N*_*A0, N*_*B0, tau*_*A, tau*_*B, time*_*span, n*_*steps):**
 
 1. create + fill the array of timesteps
-2. create arrays to store the values of N*_*A and N*_*B at each timestep, and initialize the first element of each array with N*_*A0 and N*_*B0.
-3. loop over all the timesteps, filling the arrays of  N*_*A and N*_*B with outputs of the update*_*populations() function
-4. return the resulting arrays of times, N*_*A and N*_*B.
+2. calculate the length of each time step as:
+  * time_step = time_span / n_steps)
+2. create arrays to store the values of N_A and N_B at each timestep
+3. initialize the first element of each array with N_A0 and N_B0.
+4. loop over all the timesteps, using the update_populations function to fill the i+1-th elements of the N_A and N_B arrays:
+
+        N_A[i+1], N_B[i+1] = update_populations(N_A[i], N_B[i], tau_A, tau_B, time_step)
+  
+5. return the resulting arrays of times, N_A and N_B.
    
 **update*_*populations(N*_*A, N*_*B, tau*_*A, tau*_*B, time*_*step)**:
 
-1. call the calculate*_*derivatives function to calculate the rate at which each species is decaying (which will be returned as dNa*_*dt and dNB*_*dt).
-2. calculate N*_*A for the next timestep as 
-  * new*_*Na = N*_*A + dNa*_*dt*time_step
-3. calculate N*_*B for the next timestep as
-  *  new*_*NB = N*_*B + dNb*_*dt*time_step
-4. return the resulting values for N*_*A and N*_*B at the next timestep.
+1. call the calculate_derivatives function to calculate the rate at which each species is decaying:
+
+        dNa_dt, dNb_dt = calculate_derivatives(N_A, N_B, tau_A, tau_B)
+
+2. calculate N_A for the next timestep as 
+  * new_Na = N_A + dNa_dt*time_step
+3. calculate N_B for the next timestep as
+  *  new_NB = N_B + dNb_dt*time_step
+4. return the resulting values for N_A and N_B at the next timestep.
 
 **calculate*_*derivatives(N*_*A, N*_*B, tau*_*A, tau*_*B)**:
 
 1. calulate the rate at which atoms of species A are decaying away as
-  * dNa*_*dt = -N*_*A / tau*_*A
+  * dNa_dt = -N_A / tau_A
 2. calulate the rate at which species B is gaining atoms (from decays of species A) and losing atoms (from their own decays) as
-  * dNb*_*dt = -N*_*B / tau*_*B + N*_*A / tau*_*A
-3. return dNa*_*dt and dNb*_*dt
+  * dNb_dt = -N_B / tau_B + N_A / tau_A
+3. return dNa_dt and dNb_dt
