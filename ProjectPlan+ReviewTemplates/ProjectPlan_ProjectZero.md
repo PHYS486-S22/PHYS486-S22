@@ -51,12 +51,15 @@ Routine Outline
     
         time, N_A, N_B = project_populations(N_A0, N_B0, tau_A, tau_B, time_span, n_steps)
         
-    and will return arrays with the time, N_A and N_B of each timestep in the simulation.
-    
+    and returns arrays with the time, N_A and N_B of each timestep in the simulation.
+
+4. Plot N_A vs. time and N_B vs. time to examine evolution of system
+
+5. (in practice the notebook then looped over several values of gamma and made a summary plot, but this is the kind of parameter variation that I have suggested to leave out of an initial planning process).    
 
 --- functions ---    
 
-**project*_*populations(N*_*A0, N*_*B0, tau*_*A, tau*_*B, time*_*span, n*_*steps):**
+**project_populations(N_A0, N_B0, tau_A, tau_B, time_span, n_steps):**
 
 1. create + fill the array of timesteps
 2. calculate the length of each time step as:
@@ -69,7 +72,7 @@ Routine Outline
   
 5. return the resulting arrays of times, N_A and N_B.
    
-**update*_*populations(N*_*A, N*_*B, tau*_*A, tau*_*B, time*_*step)**:
+**update_populations(N_A, N_B, tau_A, tau_B, time_step)**:
 
 1. call the calculate_derivatives function to calculate the rate at which each species is decaying:
 
@@ -81,7 +84,7 @@ Routine Outline
   *  new_NB = N_B + dNb_dt*time_step
 4. return the resulting values for N_A and N_B at the next timestep.
 
-**calculate*_*derivatives(N*_*A, N*_*B, tau*_*A, tau*_*B)**:
+**calculate_derivatives(N_A, N_B, tau_A, tau_B)**:
 
 1. calulate the rate at which atoms of species A are decaying away as
   * dNa_dt = -N_A / tau_A
