@@ -28,7 +28,7 @@ Variables
 > List here the data that your routine will need to return to enable your analysis.  Specify what the data will mean, what data type (float/integer/string, stored as a single value or an array) you will store it in, and the physical units you will adopt for those values. Note that the units you plan adopt should be informed by the magnitude of the values you expect to compute -- it is awkward to express a year as 10<sup>7</sup> seconds, for example...
 
 
-Routine Outline
+Routine Outline - really
 ---------
 
 > Here, outline your strategy for performing your calculation, using a combination of function definition + return statements (which illustrate the type of data the function will recieve and return), and psuedocode (to illustrate how the function will work).
