@@ -16,7 +16,7 @@ Variables
 ---------
 >Does the plan's list of variables appear complete, with accurate datatypes + physical units? 
 
->Are the variable names clear and concise? 
+>Do the variable names give you good information about what they store + how they might be used? 
 
 >Are there key inputs or outputs that it may be beneficial to prioritize in the project's plan?
 
@@ -25,7 +25,7 @@ Routine Outline
 ---------
 >Does the outline include all the key steps for this calculation?
 
->Does the outline provide enough detail on the core calculations that will be performed?  
+>Does the outline provide enough detail that you can understand how the core calculations will be performed?  
 
 >In your response, strive to provide constructive feedback on:
 
