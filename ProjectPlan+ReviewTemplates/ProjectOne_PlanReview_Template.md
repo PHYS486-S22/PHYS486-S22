@@ -28,6 +28,7 @@ Routine Outline
 >Does the outline provide enough detail on the core calculations that will be performed?  
 
 >In your response, strive to provide constructive feedback on:
+
 > -what part of the project plan was most illuminating / clarifying for your own thinking about the project;
 
 > -what part of the project plan might benefit the most from a second pass, and why;
