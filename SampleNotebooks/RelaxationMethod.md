@@ -69,6 +69,16 @@ Below are cells that repeat the calculations above.
 Re-relax the system, and see how the e-field strength compares
 ----
 
+### Wider GRID
+Now let's use the same capacitor as in our first attempt, but modify the grid we are relaxing on to make it larger (which will take longer to solve!).
+
+Since this will take longer to solve, I've made this modification for you: I've modified the cells below to use a 200x200 grid, but with the same spatial scale and capacitor as in the first simulation.
+
+### How many more cells are in this grid? What do you expect that to do to the runtime of the relaxation step?
+(note that google colab gives a little counter at the bottom of a notebook showing how long the current cell has been running. You may want to re-run one of the cells above that relaxes a 100x100 grid, and use that time along with your estimated inflation factor to identify how long this calculation may take to run).
+
+----
+
 You should now have three plots showing the magnitude of the E-field in capacitor's mid-plane in a set of consistent units.
 
 Examine three properties of each plot:
