@@ -57,7 +57,7 @@ It would be better to convert the plot above to report the E-field strength in t
 
 #### value to multiply ey by to get field strength in units of V/m: XXXX <-- update this!!!!
 
-Now go ahead and multiply ey by this value and remake the plot above.  Does the peak field strength match your estimate from earlier in the notebook?
+Now go ahead and multiply ey by this value and remake the plot above.  Does the peak field strength match your estimate from earlier in the notebook?  Is there any *physical* reason why you might expect it to differ?
 
 ----
 ### Compare to a wider capacitor.
