@@ -60,6 +60,14 @@ It would be better to convert the plot above to report the E-field strength in t
 Now go ahead and multiply ey by this value and remake the plot above.  Does the peak field strength match your estimate from earlier in the notebook?
 
 ----
+### Compare to a wider capacitor.
+
+Below are cells that repeat the calculations above. 
+
+### MODIFY THESE CELLS TO SIMULATE A WIDER (40 cm) CAPACITOR 
+
+Re-relax the system, and see how the e-field strength compares
+----
 
 You should now have three plots showing the magnitude of the E-field in capacitor's mid-plane in a set of consistent units.
 
